@@ -14,10 +14,13 @@ use Filament\Tables\Table;
 class TaskResource extends Resource
 {
     protected static ?string $model = Task::class;
+
     protected static ?string $slug = 'tarefas';
 
     protected static ?string $navigationIcon = 'heroicon-o-list-bullet';
+
     protected static ?string $label = 'Tarefa';
+
     protected static ?string $pluralLabel = 'Tarefas';
 
     public static function form(Form $form): Form
@@ -34,7 +37,7 @@ class TaskResource extends Resource
                         ->columnSpanFull(),
                     Forms\Components\Toggle::make('status')
                         ->label('Situação')
-                        ->default(false)
+                        ->default(false),
                 ]),
             ]);
     }
@@ -61,7 +64,7 @@ class TaskResource extends Resource
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Data da criação')
                     ->dateTime('d/m/Y H:i')
-                    ->sortable()
+                    ->sortable(),
 
             ])
             ->filters([

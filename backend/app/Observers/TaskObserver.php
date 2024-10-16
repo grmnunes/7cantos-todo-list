@@ -20,8 +20,7 @@ class TaskObserver
         if (boolval($task->getOriginal('status')) != $task->status) {
             if ($task->status) {
                 $task->finished_at = now();
-            }
-            else {
+            } else {
                 $task->finished_at = null;
             }
         }
