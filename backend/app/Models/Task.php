@@ -19,6 +19,10 @@ class Task extends Model
         'user_id',
     ];
 
+    protected $casts = [
+        'status' => 'boolean',
+    ];
+
     protected static function booted(): void
     {
         static::addGlobalScope('owner', function (Builder $query) {
