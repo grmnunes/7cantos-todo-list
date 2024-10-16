@@ -249,4 +249,4 @@ ou
 
 yarn dev
 ```
-O servidor será iniciado, normalmente em [http://127.0.0.1:8000](http://127.0.0.1:5173).
+O servidor será iniciado, normalmente em [http://127.0.0.1:5173](http://127.0.0.1:5173).
